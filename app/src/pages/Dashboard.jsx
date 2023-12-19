@@ -22,6 +22,12 @@ const Dashboard = () => {
       <Grid item>
         <CourseCard />
       </Grid>
+      <Grid item>
+        <CourseCard />
+      </Grid>
+      <Grid item>
+        <CourseCard />
+      </Grid>
     </Grid>
   );
 };
