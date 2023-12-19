@@ -3,8 +3,9 @@ import './App.css';
 import Assessment from "./pages/Assessment";
 import Dashboard from "./pages/Dashboard";
 import Appbar from './components/Appbar';
-import Home from "./pages/Home";
+import Module from "./pages/Module";
 import AdminDashboard from "./pages/AdminDashboard";
+import Courses from "./pages/Courses";
 
 import Profile from "./components/Profile";
 import SideBar from "./components/Sidebar/SideBar";
@@ -21,10 +22,11 @@ function App() {
             <Route path='/' element={<Dashboard/>}></Route>
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Profile/profile" element={<Profile />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/module" element={<Module />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/Announcement" element={<Announcement/>}/>
             <Route path="/Assessment" element={<Assessment/>}/>
+            <Route path="/courses" element={<Courses/>}/>
             {/* 404 not found */}
             <Route path="*" element={<> not found</>} />
           </Routes>
