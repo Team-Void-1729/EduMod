@@ -125,7 +125,7 @@ main {
 }
 .link:hover {
   border-right: 4px solid white;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(3, 8, 53, 0.74) 0%, rgba(2, 0, 31, 0.61) 100%);
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
