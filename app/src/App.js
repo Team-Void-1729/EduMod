@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Assessment from "./pages/Assessment";
 import Dashboard from "./pages/Dashboard";
 import Appbar from './components/Appbar';
 import Profile from "./components/Profile";
@@ -18,6 +19,7 @@ function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Profile/profile" element={<Profile />} />
             <Route path="/Announcement" element={<Announcement/>}/>
+            <Route path="/Assessment" element={<Assessment/>}/>
             {/* 404 not found */}
             <Route path="*" element={<> not found</>} />
           </Routes>
