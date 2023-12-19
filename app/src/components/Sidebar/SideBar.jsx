@@ -15,6 +15,11 @@ import * as AiIcons from "react-icons/ai";
 import { FaBookOpen } from "react-icons/fa";
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import MessageIcon from '@mui/icons-material/Message';
+import GroupsIcon from '@mui/icons-material/Groups';
+import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+import HelpIcon from '@mui/icons-material/Help';
+import SourceIcon from '@mui/icons-material/Source';
+import HomeIcon from '@mui/icons-material/Home';
 // import AuthService from "../../services/kc-auth";
 import Img from "../../assets/image/site_logo.png"
 
@@ -22,70 +27,87 @@ const routes = [
   {
     path: "/",
     name: "Dashboard",
-    icon: <FaHome />,
+    icon: <HomeIcon />,
   },
-  
   {
-    path: "/file-manager",
+    path: "/courses",
     name: "Courses",
-    icon: <AiTwotoneFileExclamation />,
-    subRoutes: [
-      {
-        path: "/Home",
-        name: "Add course ",
-        icon: <FaBookOpen />
-      },
-      {
-        path: "/Assessment",
-        name: "Assessment",
-        icon: <AssessmentOutlinedIcon/>
-      },
-      {
-        path:"/Discussion",
-        name:"Discussion",
-        icon: <MessageIcon/>
-      },
-      {
-        path: "/Announcement",
-        name: "Announcement",
-    },
-    {
-      path: "/bigbluebutton",
-      name: "bigbluebutton",
-    },
-      {
-        path: "/Profile",
-        name: "Profile",
-        icon: <FaBookOpen />
-      },
+    icon: <TextSnippetIcon />,
+  },
+  {
+    path: "/collaboration",
+    name: "Collaboration",
+    icon: <GroupsIcon />,
+  },
+  {
+    path: "/resources",
+    name: "Resources",
+    icon: <SourceIcon />,
+  },
+  {
+    path: "/support",
+    name: "Support",
+    icon: <HelpIcon />,
+    cName: "nav-text",
+  },
+];
+  // {
+  //   path: "/file-manager",
+  //   name: "Courses",
+  //   icon: <AiTwotoneFileExclamation />,
+  //   subRoutes: [
+  //     {
+  //       path: "/Home",
+  //       name: "Add course ",
+  //       icon: <FaBookOpen />
+  //     },
+  //     {
+  //       path: "/Assessment",
+  //       name: "Assessment",
+  //       icon: <AssessmentOutlinedIcon/>
+  //     },
+  //     {
+  //       path:"/Discussion",
+  //       name:"Discussion",
+  //       icon: <MessageIcon/>
+  //     },
+  //     {
+  //       path: "/Announcement",
+  //       name: "Announcement",
+  //   },
+  //   {
+  //     path: "/bigbluebutton",
+  //     name: "bigbluebutton",
+  //   },
+      // {
+      //   path: "/Profile",
+      //   name: "Profile",
+      //   icon: <FaBookOpen />
+      // },
       // {
       //   path:"/https://mui.com/",
       //   name: "Bigbluebutton",
       // },
 
-      {
-        path: "/Assignment",
-        name: "Assignments",
-        icon: <FaMoneyBill />,
-      },
-    ],
-  },
-  {
-    path: "/analytics",
-    name: "Analytics",
-    icon: <BsFillBarChartFill />,
-  },
-  {
-    path: "/users",
-    name: "Team",
-    icon: <IoIcons.IoMdPeople />,
-    cName: "nav-text",
-  },
-  {
-    path: "/messages",
-    name: "Messages",
-    icon: <MdMessage />,
-  },
+  //     {
+  //       path: "/Assignment",
+  //       name: "Assignments",
+  //       icon: <FaMoneyBill />,
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   path: "/users",
+  //   name: "Team",
+  //   icon: <IoIcons.IoMdPeople />,
+  //   cName: "nav-text",
+  // },
+  // {
+  //   path: "/messages",
+  //   name: "Messages",
+  //   icon: <MdMessage />,
+  // },
   
   // {
   //   path: "/settings",
@@ -107,16 +129,10 @@ const routes = [
     
   //   ],
   // },
-  {
-    path: "/saved",
-    name: "Support",
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: "nav-text",
-  },
-];
+  
 
 const SideBar = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const inputAnimation = {
     hidden: {
@@ -158,7 +174,7 @@ const SideBar = ({ children }) => {
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
-
+            
             transition: {
               duration: 0.5,
               type: "just",
@@ -168,6 +184,7 @@ const SideBar = ({ children }) => {
           className={`sidebar `}
         >
           <div className="top_section">
+          {isOpen && <img src={Img} style={{height: "32px", width: "32px"}}/>}
             <AnimatePresence>
               {isOpen && (
                 <motion.h1
