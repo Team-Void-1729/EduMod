@@ -124,11 +124,10 @@ main {
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .link:hover {
-  border-right: 4px solid white;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0) 100%);
+  border-right: 4px solid white; /* Change from border-right to border-bottom */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0) 100%);
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
-
 .link_text {
   white-space: nowrap;
   /* font-size: 15px; */
