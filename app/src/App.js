@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import Dashboard from "./pages/Dashboard";
 import Appbar from './components/Appbar';
-import Settings from "./pages/Settings";
 import Profile from "./components/Profile";
 import SideBar from "./components/Sidebar/SideBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -15,8 +14,8 @@ function App() {
             <Appbar />
           <Routes>
             <Route path='/' element={<Dashboard/>}></Route>
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/settings/profile" element={<Profile />} />
+            <Route path="/Profile" element={<Profile />} />
+            <Route path="/Profile/profile" element={<Profile />} />
             {/* 404 not found */}
             <Route path="*" element={<> not found</>} />
           </Routes>

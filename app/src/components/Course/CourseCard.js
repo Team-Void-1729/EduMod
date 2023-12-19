@@ -16,6 +16,15 @@ import Img from "../../assets/image/img2.jpg";
 import { Link } from 'react-router-dom';
 
 export default function CourseCard(){
+    const cardStyles = {
+        border: "1px solid #ccc",
+        padding: "20px",
+        borderRadius: "5px",
+        transition: "box-shadow 0.3s ease-in-out", // Adding transition for smoother hover effect
+        "&:hover": {
+          boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)", // Applying box-shadow on hover
+        },
+      };
     return(
         <div>
             <Card sx={{ maxWidth: 250, maxHeight: 400, }} elevation={3}>

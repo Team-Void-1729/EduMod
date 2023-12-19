@@ -53,8 +53,8 @@ const routes = [
       name: "bigbluebutton",
     },
       {
-        path: "/Settings",
-        name: "Syllabus",
+        path: "/Profile",
+        name: "Profile",
         icon: <FaBookOpen />
       },
       // {
