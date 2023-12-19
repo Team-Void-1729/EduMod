@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Dashboard from "./pages/Dashboard";
+import Appbar from './components/Appbar';
 import Settings from "./pages/Settings";
 import Profile from "./components/Profile";
 import SideBar from "./components/Sidebar/SideBar";
@@ -11,6 +12,7 @@ function App() {
     <div >
       <Router>
         <SideBar>
+            <Appbar />
           <Routes>
             <Route path='/' element={<Dashboard/>}></Route>
             <Route path="/settings" element={<Settings />} />
