@@ -16,6 +16,7 @@ import { FaBookOpen } from "react-icons/fa";
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import MessageIcon from '@mui/icons-material/Message';
 // import AuthService from "../../services/kc-auth";
+import Img from "../../assets/image/site_logo.png"
 
 const routes = [
   {
@@ -180,7 +181,7 @@ const SideBar = ({ children }) => {
                 </motion.h1>
               )}
             </AnimatePresence>
-
+            
             <div className="bars"  onClick={toggle} >
               <FaBars  />
             </div>

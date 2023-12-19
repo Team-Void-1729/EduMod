@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProfileCard.css";
-import avatar from "../../assets/image/img2.jpg";
+import avatar from "../../assets/image/img3.jpg"
 
 function ProfileCard(props) {
 	return (

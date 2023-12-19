@@ -12,7 +12,7 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import CommentIcon from '@mui/icons-material/Comment';
 import FolderIcon from '@mui/icons-material/Folder';
-import Img from "../../assets/image/img2.jpg";
+import Img from "../../assets/image/img.png";
 import { Link } from 'react-router-dom';
 
 export default function CourseCard(){
@@ -27,10 +27,10 @@ export default function CourseCard(){
       };
     return(
         <div>
-            <Card sx={{ maxWidth: 250, maxHeight: 400, }} elevation={3}>
+            <Card sx={{ maxWidth: 250, maxHeight: 300, }} elevation={3}>
                 <CardMedia
                     component="img"
-                    height="154"
+                    height="104"
                     image={Img}
                     action={
                         <IconButton>
