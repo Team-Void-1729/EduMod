@@ -6,4 +6,14 @@ const getCourses = async () => {
   return res.data;
 };
 
-export default getCourses
+const login = async(data)=>{
+  const res = await axiosInstance.post("/auth/login", data)
+  return res.data;
+}
+
+const api = {
+  getCourses,
+  login
+}
+
+export default api

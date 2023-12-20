@@ -15,11 +15,16 @@ import "./css/App.css";
 import { useEffect, useState } from "react";
 import { useAuth } from "./context/AuthContext";
 import AllCourses from "./pages/Courses";
+// import AdminDashboard from "./pages/AdminDashboard";
+import { useNavigate } from "react-router-dom";
+import RequireAuth from "./pages/RequireAuth";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
-  const [user, setUser] = useState();
-  const auth = useAuth();
+  // const [user, setUser] = useState();
+  const {user} = useAuth();
+  console.log('user', user)
+  // const nav = useNavigate();
 
   // useEffect(() => {
   //   const userIsLoggedIn = localStorage.getItem("loggedIn") === "true";
@@ -27,6 +32,7 @@ function App() {
   //     setLoggedIn(true);
   //   }
   // }, []);
+
 
   return (
     <div>
@@ -44,15 +50,21 @@ function App() {
               />
             }
           ></Route> */}
+
+          {/* <Route path="/" element={<RequireAuth></RequireAuth>} /> */}
             <Route path="/" element={<Dashboard />} />
             <Route path="/settings/profile" element={<ProfilePage />} />
             {/* <Route path="/home" element={<Home />} /> */}
-            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            
             <Route path="/announcement" element={<Announcement />} />
             <Route path="/assessment" element={<Assessment />} />
 
             <Route path="/login" element={<UserLogin />} />
             <Route path="/courses" element={<AllCourses />} />
+
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+            {/* <Route path="/admin/create-user" element={<AdminDashboard />} /> */}
 
             {/* 404 not found */}
             <Route path="*" element={<> not found</>} />

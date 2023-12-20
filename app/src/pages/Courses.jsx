@@ -26,7 +26,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import { styled, css } from "@mui/system";
-import getCourses from "../api/";
+import api from "../api/";
 import { useEffect } from "react";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -69,7 +69,7 @@ export default function AllCourses() {
   const [courses, setCourses] = React.useState([]);
 
   const getAllCourses = async () => {
-    const c = await getCourses();
+    const c = await api.getCourses();
     setCourses(c);
   };
 

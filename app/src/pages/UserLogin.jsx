@@ -8,17 +8,27 @@ import {
   Stack,
   TextField,
 } from "@mui/material";
-import React, { useContext } from "react";
+import React, { useState, useRef } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate, redirect } from "react-router-dom";
+import api from "../api";
+
+
+const users = { email: "user123@gmail.com", password:"asdwer" };
 
 const UserLogin = () => {
   const { user, setUser } = useAuth();
   const navigate = useNavigate();
+  const emailRef = useRef();
+  const passwdRef = useRef();
 
-  const handleLogin = () => {
-    const users = { user: "user123" };
-    setUser(users);
+  const handleLogin = async() => {
+    const data = {"email":emailRef.current.value, "password":passwdRef.current.value}
+    console.log(data)
+
+    const res = await api.login(data)
+    setUser(res);
+    console.log(res)
     localStorage.setItem("loggedIn", true);
     navigate("/");
   };
@@ -52,16 +62,21 @@ const UserLogin = () => {
               variant="outlined"
               color="secondary"
               label="Email"
+              inputRef={emailRef}
+              // placeholder={users.email}
               // onChange={(e) => setFirstName(e.target.value)}
               // value={firstName}
+              onChange={()=>setUser()}
               fullWidth
               required
             />
             <TextField
-              type="text"
+              type="password"
               variant="outlined"
               color="secondary"
               label="Password"
+              inputRef={passwdRef}
+              // placeholder={users.password}
               // onChange={(e) => setFirstName(e.target.value)}
               // value={firstName}
               fullWidth

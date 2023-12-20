@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 import Divider from '@mui/material/Divider';
 
 
-export default function CourseCard(){
+export default function CourseCard({title, date}){
     const cardStyles = {
         border: "1px solid #ccc",
         padding: "20px",
@@ -46,10 +46,10 @@ export default function CourseCard(){
                 /> */}
                 <CardContent style={{height: "145px", backgroundColor: newRandomColor, color: "#fff"}}>
                     <Typography gutterBottom variant="h5" component="div">
-                    Biology 101
+                    {title}
                     </Typography>
                     <Typography variant="body2" color="#fff">
-                    September 14, 2016
+                    {date}
                     </Typography>
                 </CardContent>
                 <Divider/>

@@ -43,6 +43,9 @@ export default function Appbar() {
 
   const handleLogout = () => {
     handleMenuClose();
+    localStorage.removeItem("user");
+    localStorage.removeItem("loggedIn");
+
     // AuthService.logout({
     //   redirectUri: process.env.REACT_APP_KEYCLOAK_REDIRECT_URI,
     // });
