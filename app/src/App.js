@@ -19,6 +19,7 @@ import AllCourses from "./pages/Courses";
 import { useNavigate } from "react-router-dom";
 import RequireAuth from "./pages/RequireAuth";
 import RichTextEditor from "./pages/RichTextEditor";
+import Analytics from "./pages/Analytics";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -54,7 +55,6 @@ function App() {
 
           {/* <Route path="/" element={<RequireAuth></RequireAuth>} /> */}
             <Route path="/" element={<Dashboard />} />
-            <Route path="/RichTextEditor" element={<RichTextEditor/>} />
             <Route path="/settings/profile" element={<ProfilePage />} />
             {/* <Route path="/home" element={<Home />} /> */}
             
@@ -67,6 +67,9 @@ function App() {
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
 
             {/* <Route path="/admin/create-user" element={<AdminDashboard />} /> */}
+
+            <Route path="/RichTextEditor" element={<RichTextEditor/>} />
+            <Route path="/Analytics" element={<Analytics/>} />
 
             {/* 404 not found */}
             <Route path="*" element={<> not found</>} />
