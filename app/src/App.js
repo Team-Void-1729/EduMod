@@ -3,7 +3,7 @@ import "./App.css";
 import Assessment from "./pages/Assessment";
 import Dashboard from "./pages/Dashboard";
 import Appbar from "./components/Appbar";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProfilePage from "./pages/ProfilePage";
 import SideBar from "./components/Sidebar/SideBar";
@@ -14,6 +14,7 @@ import UserLogin from "./pages/UserLogin";
 import "./css/App.css";
 import { useEffect, useState } from "react";
 import { useAuth } from "./context/AuthContext";
+import AllCourses from "./pages/Courses";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -30,8 +31,10 @@ function App() {
   return (
     <div>
       <Router>
-        <Routes>
-          <Route
+        <SideBar>
+          <Appbar />
+          <Routes>
+            {/* <Route
             path="/"
             element={
               <ProtectedRoute
@@ -40,25 +43,25 @@ function App() {
                 redirectPath="/login"
               />
             }
-          ></Route>
-          <Route path="/settings/profile" element={<ProfilePage />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
-          <Route path="/announcement" element={<Announcement />} />
-          <Route path="/assessment" element={<Assessment />} />
+          ></Route> */}
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/settings/profile" element={<ProfilePage />} />
+            {/* <Route path="/home" element={<Home />} /> */}
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/announcement" element={<Announcement />} />
+            <Route path="/assessment" element={<Assessment />} />
 
-          <Route path="/login" element={<UserLogin />} />
+            <Route path="/login" element={<UserLogin />} />
+            <Route path="/courses" element={<AllCourses />} />
 
-          {/* 404 not found */}
-          <Route path="*" element={<> not found</>} />
-        </Routes>
+            {/* 404 not found */}
+            <Route path="*" element={<> not found</>} />
+          </Routes>
+        </SideBar>
       </Router>
 
-      {loggedIn && (
-        <SideBar>
-          <Appbar />
-        </SideBar>
-      )}
+      {/* {loggedIn && ( */}
+      {/* )} */}
     </div>
   );
 }
