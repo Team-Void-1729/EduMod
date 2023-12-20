@@ -11,13 +11,19 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.2",
+    "draft-js": "^0.11.7",
     "framer-motion": "^10.16.16",
+<<<<<<< HEAD
     "generate-password": "^1.7.1",
+=======
+    "immutable": "^5.0.0-beta.4",
+>>>>>>> 512186c99be4bc793aee69e45ab1d7bf59d216be
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1",
+    "react-to-print": "^2.14.15",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

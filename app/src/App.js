@@ -18,6 +18,7 @@ import AllCourses from "./pages/Courses";
 // import AdminDashboard from "./pages/AdminDashboard";
 import { useNavigate } from "react-router-dom";
 import RequireAuth from "./pages/RequireAuth";
+import RichTextEditor from "./pages/RichTextEditor";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -53,6 +54,7 @@ function App() {
 
           {/* <Route path="/" element={<RequireAuth></RequireAuth>} /> */}
             <Route path="/" element={<Dashboard />} />
+            <Route path="/RichTextEditor" element={<RichTextEditor/>} />
             <Route path="/settings/profile" element={<ProfilePage />} />
             {/* <Route path="/home" element={<Home />} /> */}
             

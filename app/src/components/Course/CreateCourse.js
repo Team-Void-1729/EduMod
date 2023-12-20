@@ -74,6 +74,71 @@ export default function CoursePopup() {
                 style={{ width: "100%" }}
                 size="auto"
               />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="Type"
+                style={{ width: "100%" }}
+                size="auto"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="Title"
+                style={{ width: "100%" }}
+                size="auto"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="Code"
+                style={{ width: "100%" }}
+                size="auto"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="Credits"
+                style={{ width: "100%" }}
+                size="auto"
+                type="number"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="Stream"
+                style={{ width: "100%" }}
+                size="auto"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="Semester"
+                style={{ width: "100%" }}
+                size="auto"
+                type="number"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="L"
+                style={{ width: "100%" }}
+                size="auto"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="T"
+                style={{ width: "100%" }}
+                size="auto"
+              />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                placeholder="P"
+                style={{ width: "100%" }}
+                size="auto"
+              />
             </Box>
             <Divider variant="middle" />
             <Box sx={{ mt: 3, ml: 2, mb: 1 }}>
