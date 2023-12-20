@@ -15,6 +15,7 @@ import "./css/App.css";
 import { useEffect, useState } from "react";
 import { useAuth } from "./context/AuthContext";
 import AllCourses from "./pages/Courses";
+import RichTextEditor from "./pages/RichTextEditor";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -45,6 +46,7 @@ function App() {
             }
           ></Route> */}
             <Route path="/" element={<Dashboard />} />
+            <Route path="/RichTextEditor" element={<RichTextEditor/>} />
             <Route path="/settings/profile" element={<ProfilePage />} />
             {/* <Route path="/home" element={<Home />} /> */}
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
